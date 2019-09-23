@@ -1,6 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import sys
+from scipy import stats
+import datetime
+import time
 sys.path.insert(0, 'evoman')
 from environment import Environment
 from demo_controller import player_controller, enemy_controller
@@ -20,12 +23,8 @@ dom_u = 1
 dom_l = -1
 env.update_parameter('contacthurt','player')
 
-# Algorithm settings
-NPOP = 20
-GENS = 10
-mutation_rate = 0.4
-NCHILDS = 2
-
+# User dependent
+file_loc = r"C:\Users\FlorisFok\Documents\Master\Evo Pro\evoman_framework\individual_demo\evoman_log"
 
 # evaluation
 def evaluate(x1):
@@ -53,9 +52,9 @@ def survival(final_len, final_num):
     Makes a gradient list ove the new gens'''
     a = []
     i = 0
-    p = 0.99
+    p = 0.98
 
-    dp = (p - 0.5)/final_len
+    dp = (p - 0.4)/final_len
     while len(a) < final_len and i < final_num - 1:
         p -= dp
         if p > np.random.random():
@@ -73,15 +72,26 @@ def sex(parent1, parent2, scores):
     offsprings = []
 
     for i in range(NCHILDS):
-        # Crossover by floar
         cross_prop = np.random.random()
-        offspring = np.array(parent1[0])*cross_prop+np.array(parent2[0])*(1-cross_prop)
-        # Crossover by bits
-        #     split_i = int(cross_prop*len(parent1))
-        #     offspring = np.array(list(parent1[0])[:split_i] + list(parent2[0][split_i:]))
+
+        if MODE == 'float':
+            # Crossover by float
+            offspring = np.array(parent1[0])*cross_prop+np.array(parent2[0])*(1-cross_prop)
+        elif MODE == 'bit':
+            # Crossover by bits
+            split_i = int(cross_prop*len(parent1))
+            offspring = np.array(list(parent1[0])[:split_i] + list(parent2[0][split_i:]))
+        elif MODE == 'uniform':
+            # Crossover by bits
+            offspring = np.zeros(parent1[0].shape)
+            for i, a in enumerate(parent1[0]):
+                if np.random.random() < 0.5:
+                    offspring[i] = a #parent1
+                else:
+                    offspring[i] = parent2[0][i]
+
+
         offsprings.append(offspring)
-
-
 
     return offsprings
 
@@ -119,14 +129,15 @@ def parent_selection(all_pop):
                     (Doesnt gets a child)
     '''
     all_pop.sort(key=sortfit, reverse=True)
+    pop_len = len(all_pop)
+    shindlerslist = survival(NPOP, pop_len)
+    cur_gen = [all_pop[i] for i in shindlerslist]
+    np.random.shuffle(cur_gen)
 
-    pop_p = np.array([all_pop[i][0] for i in range(NPOP)])
-    fit_pop_p = np.array([all_pop[i][1] for i in range(NPOP)])
+    lucky_list = [i for i in range(pop_len) if not i in shindlerslist and np.random.random() > 0.75]
+    lucky_gen = [all_pop[i] for i in lucky_list]
 
-    old_pop = list(zip(pop_p, fit_pop_p))
-    np.random.shuffle(old_pop)
-
-    return old_pop, []
+    return np.array(cur_gen), np.array(lucky_gen)
 
 def mutation_rate_change(mu):
     '''
@@ -134,21 +145,40 @@ def mutation_rate_change(mu):
     Input: mu [float]
     Ouput: mu [float]
     '''
-    return mu - 0.01
+    return mu - delta_mu
 
 def plot_scores(best_scores, avg_scores):
     plt.figure(figsize=(12,12))
-    plt.plot(best_scores, label="best")
-    plt.plot(avg_scores, label="avg")
-    plt.ylim((0,100))
+    plt.plot(np.array(best_scores)[:,1], '.-', label="best", color='green')
+    plt.plot(np.array(best_scores)[:,0], '.-', label="worst", color='red')
+    plt.plot(avg_scores, linewidth=2, label="avg")
+    plt.ylim((-10,100))
     plt.legend()
     plt.title("First run score")
     plt.show()
 
+def save_log(inp, log, result):
+    loc = file_loc + str(inp) +".txt"
+    with open(loc, "w") as f:
+        f.write("LOG:\n" + str(log) + "\nResults: \n" + str(result))
+
+
+
+# Algorithm settings
+NPOP = 20
+GENS = 20
+MU = 0.8
+delta_mu = MU/GENS
+NCHILDS = 2
+MODE = 'uniform'
+
+ts = time.time()
 cur_gen = initialisatie(NPOP)
 
 best_scores = []
 avg_scores = []
+var_scores = []
+mutation_rate = MU
 
 for gen in range(GENS):
     print(f"GEN {gen}")
@@ -158,8 +188,11 @@ for gen in range(GENS):
     scores = []
     new_pop = []
     more = 5
+    max_len = len(parent_gen) - 1
 
     for num in range(0, len(parent_gen), 2):
+        if num == max_len:
+            continue
         parent1 = parent_gen[num]
         parent2 = parent_gen[num+1]
 
@@ -172,12 +205,36 @@ for gen in range(GENS):
     fit_new_pop = evaluate(np.array(new_pop))
     new_gen = list(zip(new_pop, fit_new_pop))
 
-    cur_gen = new_gen + parent_gen + survival_gen
+    cur_gen = list(new_gen) + list(parent_gen) + list(survival_gen)
 
     scores = [i[1] for i in cur_gen]
     scores.sort(reverse=True)
-    print(scores)
-    best_scores.append(max(scores))
-    avg_scores.append(sum(scores)/len(scores))
+    scores = np.array(scores)
 
+    dis = stats.describe(np.array(scores))
+    best_scores.append(dis.minmax)
+    avg_scores.append(dis.mean)
+    var_scores.append(dis.variance)
+
+cur_gen.sort(key=sortfit, reverse=True)
+sollution = cur_gen[0][0]
+total_time = time.time() - ts
+
+print(f"took: {total_time} to find \n {sollution}")
+
+save_log("test", {
+    "NPOP": NPOP,
+    "GENS": GENS,
+    "MUTA start": MU,
+    "MUTA step": delta_mu,
+    "NCHILDS": NCHILDS,
+    "Cross MODE": MODE,
+    "time": datetime.date.today(),
+    "total_time": total_time
+}, {
+    "Best Score": best_scores[-1],
+    "Scores": scores,
+    "Avg Scores": avg_scores,
+    "sollution":sollution,
+})
 plot_scores(best_scores, avg_scores)
