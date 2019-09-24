@@ -83,9 +83,11 @@ class Population:
         self.mean_age = None
         self.mean_children = None
         self.generation = 1
-        self.mutation_rate = .6
+        self.mutation_rate = 0
         self.mean_fit_history = list()
         self.max_fit_history = list()
+        self.worst_fit = None
+        self.worst_fit_history = list()
 
     def append(self, individual):
         self.individuals.append(individual)
@@ -103,14 +105,20 @@ class Population:
         population_fit = [i.fitness for i in self.individuals]
         self.mean_fit = np.mean(population_fit)
         self.max_fit = np.max(population_fit)
+        self.worst_fit = np.min(population_fit)
         self.mean_age = np.mean([i.age for i in self.individuals])
         self.mean_children = np.mean([i.children for i in self.individuals])
 
     def display_population(self):
         i = 1
         for individual in self.individuals:
+            if individual.parents is not None:
+                parent1, parent2 = individual.parents
+                mean_parents = (parent1.fitness + parent2.fitness) / 2
+            else:
+                mean_parents = 0
             print(f'{i}: fitness = {round(individual.fitness, 4)}, age = {individual.age}',
-                  f'children = {individual.children}')
+                  f'children = {individual.children}, parent_fit = {round(mean_parents, 2)}')
             i += 1
 
         print(f'Mean fitness: {round(self.mean_fit, 4)}, Mean age: {round(self.mean_age, 2)}',
@@ -204,12 +212,14 @@ class Population:
             individual.birthday()
         self.mean_fit_history.append(self.mean_fit)
         self.max_fit_history.append(self.max_fit)
+        self.worst_fit_history.append(self.worst_fit)
 
     def plot_generations(self):
         plt.figure(figsize=(12, 12))
         plt.plot(self.max_fit_history, label="best")
         plt.plot(self.mean_fit_history, label="avg")
-        plt.ylim((0, 100))
+        plt.plot(self.worst_fit_history, label='worst')
+        plt.ylim((-10, 100))
         plt.legend()
         plt.title("First run score")
         plt.show()
@@ -223,7 +233,7 @@ def main(size=5, generations=5, children_per_gen=5):
         print('Generation:', population.generation)
 
         for j in range(children_per_gen):
-            population.sex(type_='recombination', selection_type='rank')
+            population.sex(type_='uniform', selection_type='rank')
 
         population.trim(type_='fit')
         population.display_population()
@@ -234,4 +244,4 @@ def main(size=5, generations=5, children_per_gen=5):
     population.plot_generations()
 
 
-main(size=20, generations=20, children_per_gen=10)
+main(size=10, generations=5, children_per_gen=5)
