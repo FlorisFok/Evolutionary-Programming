@@ -78,15 +78,15 @@ class Population:
     def __init__(self, size=5):
         self.individuals = list()
         self.size = size
-        self.mean_fit = None
-        self.max_fit = None
+        self.generation = 1
+        self.mutation_rate = 0.3
         self.mean_age = None
         self.mean_children = None
-        self.generation = 1
-        self.mutation_rate = 0
+        self.mean_fit = None
+        self.max_fit = None
+        self.worst_fit = None
         self.mean_fit_history = list()
         self.max_fit_history = list()
-        self.worst_fit = None
         self.worst_fit_history = list()
 
     def append(self, individual):
