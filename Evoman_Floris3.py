@@ -81,22 +81,27 @@ def sex(parent1, parent2, scores):
 
         if CROSS == 'fraction':
             # Crossover by float
-            offspring = np.array(parent1[0])*cross_prop+np.array(parent2[0])*(1-cross_prop)
+            offsprings.append(np.array(parent1[0])*cross_prop+np.array(parent2[0])*(1-cross_prop))
+            offsprings.append(np.array(parent1[0])*(1-cross_prop)+np.array(parent2[0])*(cross_prop))
         elif CROSS == 'parts':
             # Crossover by bits
             split_i = int(cross_prop*len(parent1))
-            offspring = np.array(list(parent1[0])[:split_i] + list(parent2[0][split_i:]))
+            offsprings.append(np.array(list(parent1[0])[:split_i] + list(parent2[0][split_i:])))
+            offsprings.append(np.array(list(parent2[0])[:split_i] + list(parent1[0][split_i:])))
         elif CROSS == 'bits':
             # Crossover by bits
-            offspring = np.zeros(parent1[0].shape)
+            offspring1 = np.zeros(parent1[0].shape)
+            offspring2 = np.zeros(parent1[0].shape)
             for i, a in enumerate(parent1[0]):
                 if np.random.random() < 0.5:
-                    offspring[i] = a #parent1
+                    offspring1[i] = a #parent1
+                    offspring2[i] = parent2[0][i]
                 else:
-                    offspring[i] = parent2[0][i]
+                    offspring1[i] = parent2[0][i]
+                    offspring2[i] = a
 
-
-        offsprings.append(offspring)
+            offsprings.append(offspring1)
+            offsprings.append(offspring2)
 
     return offsprings
 
@@ -145,14 +150,15 @@ def parent_selection(all_pop):
     pop_len = len(all_pop)
 
     if SELECT == "Schindler":
-        shindlerslist = survival(NPOP, pop_len)
+        shindlerslist = survival(PARENT_SIZE, pop_len)
         cur_gen = [all_pop[i] for i in shindlerslist]
 
     elif SELECT == "prop":
         indxs = list(range(len(all_pop)))
         sum_fit = sum(np.array(all_pop)[:, 1] + 10)
         prop = [ (i[1] + 10) / sum_fit for i in all_pop]
-        random_list = [np.random.choice(indxs, replace=False, p=prop) for i in range(NPOP)]
+        # We need to have replace on true otherwise we still select the entire population
+        random_list = [np.random.choice(indxs, replace=True, p=prop) for i in range(PARENT_SIZE)]
         cur_gen = [all_pop[i] for i in random_list]
         shindlerslist = 0
 
@@ -227,7 +233,7 @@ def get_settings():
 
             else:
                 if not arg in ['bits', 'random', 'noise',
-                               'Schindler', 'fraction', 'parts']:
+                               'Schindler', 'fraction', 'parts', 'prop']:
                     print("Unknown setting")
                     sys.exit()
                 settings[arguments[n]] = arg
@@ -243,22 +249,22 @@ def name_check(name, ext, file_loc):
     while name+str(i)+ext in os.listdir(file_loc):
         i+=1
 
-    print(name+str(i)+ext)
     return name+str(i)+ext
 
 settings = get_settings()
 
 # Algorithm settings
-NPOP = 20           if settings['NPOP'] == None else int(settings['NPOP'])
-GENS = 20           if settings['GENS'] == None else int(settings['GENS'])
-MU = 0.3            if settings['MU'] == None else settings['MU']
+NPOP = 50           if settings['NPOP'] == None else int(settings['NPOP']) #https://www.researchgate.net/profile/Vlasis_Koumousis/publication/3418865_A_saw-tooth_genetic_algorithm_combining_the_effects_of_variable_population_size_and_reinitialization_to_enhance_performance/links/0c96051862c1f60868000000.pdf
+GENS = 100          if settings['GENS'] == None else int(settings['GENS']) #https://www.semanticscholar.org/paper/A-study-on-non-random-mating-and-varying-population-Laseeb/b06da1fdb611bcdc7e52785784be455db56d12a4
+MU = 0.3            if settings['MU'] == None else settings['MU'] #bronnnnn
 CROSS = 'bits'      if settings['CROSS'] == None else settings['CROSS']
-SELECT = 'prop'   if settings['SELECT'] == None else settings['SELECT']
-MUTATE = 'random'    if settings['MUTATE'] == None else settings['MUTATE']
+SELECT = 'prop'     if settings['SELECT'] == None else settings['SELECT']
+MUTATE = 'random'   if settings['MUTATE'] == None else settings['MUTATE']
 LUCKY = True        if settings['LUCKY'] == None else settings['LUCKY']
 
 delta_mu = MU/GENS # MU gets to zero at last generation
-NCHILDS = 2
+NCHILDS = 1
+PARENT_SIZE = NPOP
 PLOT = False
 
 ts = time.time()
@@ -327,7 +333,7 @@ save_log("test", {
     "Best Score": best_scores[-1],
     "Scores": scores,
     "Avg Scores": avg_scores,
-    "Best Scores":best_scores,
-    "sollution":sollution,
+    "Best Scores": best_scores,
+    "sollution": sollution,
 })
 plot_scores(best_scores, avg_scores, CROSS + SELECT + MUTATE + str(LUCKY))
