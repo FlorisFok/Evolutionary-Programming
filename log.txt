@@ -1,0 +1,644 @@
+pygame 1.9.6
+Hello from the pygame community. https://www.pygame.org/contribute.html
+
+MESSAGE: Pygame initialized for simulation.
+
+PARAMETER CHANGE: enemies = [1]
+
+ LOADING SAVED SPECIALIST FRACTION_1 SOLUTION FOR ENEMY 1 
+
+
+RUN: run status: enemy: 1; fitness: 75.75297592783951; player life: 0; enemy life: 10.0; time: 190
+
+RUN: run status: enemy: 1; fitness: 75.75297592783951; player life: 0; enemy life: 10.0; time: 190
+
+RUN: run status: enemy: 1; fitness: 75.75297592783951; player life: 0; enemy life: 10.0; time: 190
+
+RUN: run status: enemy: 1; fitness: 75.75297592783951; player life: 0; enemy life: 10.0; time: 190
+
+RUN: run status: enemy: 1; fitness: 75.75297592783951; player life: 0; enemy life: 10.0; time: 190
+
+ LOADING SAVED SPECIALIST PARTS_1 SOLUTION FOR ENEMY 1 
+
+
+RUN: run status: enemy: 1; fitness: 94.02326625757942; player life: 90; enemy life: 0; time: 145
+
+RUN: run status: enemy: 1; fitness: 94.02326625757942; player life: 90; enemy life: 0; time: 145
+
+RUN: run status: enemy: 1; fitness: 94.02326625757942; player life: 90; enemy life: 0; time: 145
+
+RUN: run status: enemy: 1; fitness: 94.02326625757942; player life: 90; enemy life: 0; time: 145
+
+RUN: run status: enemy: 1; fitness: 94.02326625757942; player life: 90; enemy life: 0; time: 145
+
+ LOADING SAVED SPECIALIST FRACTION_5 SOLUTION FOR ENEMY 1 
+
+
+RUN: run status: enemy: 1; fitness: 57.74772657195337; player life: 0; enemy life: 30.0; time: 191
+
+RUN: run status: enemy: 1; fitness: 57.74772657195337; player life: 0; enemy life: 30.0; time: 191
+
+RUN: run status: enemy: 1; fitness: 57.74772657195337; player life: 0; enemy life: 30.0; time: 191
+
+RUN: run status: enemy: 1; fitness: 57.74772657195337; player life: 0; enemy life: 30.0; time: 191
+
+RUN: run status: enemy: 1; fitness: 57.74772657195337; player life: 0; enemy life: 30.0; time: 191
+
+ LOADING SAVED SPECIALIST PARTS_5 SOLUTION FOR ENEMY 1 
+
+
+RUN: run status: enemy: 1; fitness: 56.60140506546479; player life: 0; enemy life: 30.0; time: 601
+
+RUN: run status: enemy: 1; fitness: 56.60140506546479; player life: 0; enemy life: 30.0; time: 601
+
+RUN: run status: enemy: 1; fitness: 56.60140506546479; player life: 0; enemy life: 30.0; time: 601
+
+RUN: run status: enemy: 1; fitness: 56.60140506546479; player life: 0; enemy life: 30.0; time: 601
+
+RUN: run status: enemy: 1; fitness: 56.60140506546479; player life: 0; enemy life: 30.0; time: 601
+
+ LOADING SAVED SPECIALIST FRACTION_7 SOLUTION FOR ENEMY 1 
+
+
+RUN: run status: enemy: 1; fitness: 12.790513847158579; player life: 0; enemy life: 80.0; time: 183
+
+RUN: run status: enemy: 1; fitness: 12.790513847158579; player life: 0; enemy life: 80.0; time: 183
+
+RUN: run status: enemy: 1; fitness: 12.790513847158579; player life: 0; enemy life: 80.0; time: 183
+
+RUN: run status: enemy: 1; fitness: 12.790513847158579; player life: 0; enemy life: 80.0; time: 183
+
+RUN: run status: enemy: 1; fitness: 12.790513847158579; player life: 0; enemy life: 80.0; time: 183
+
+ LOADING SAVED SPECIALIST PARTS_7 SOLUTION FOR ENEMY 1 
+
+
+RUN: run status: enemy: 1; fitness: 3.3062678611973; player life: 0; enemy life: 90.0; time: 297
+
+RUN: run status: enemy: 1; fitness: 3.3062678611973; player life: 0; enemy life: 90.0; time: 297
+
+RUN: run status: enemy: 1; fitness: 3.3062678611973; player life: 0; enemy life: 90.0; time: 297
+
+RUN: run status: enemy: 1; fitness: 3.3062678611973; player life: 0; enemy life: 90.0; time: 297
+
+RUN: run status: enemy: 1; fitness: 3.3062678611973; player life: 0; enemy life: 90.0; time: 297
+
+PARAMETER CHANGE: enemies = [2]
+
+ LOADING SAVED SPECIALIST FRACTION_1 SOLUTION FOR ENEMY 2 
+
+
+RUN: run status: enemy: 2; fitness: 21.22544845445559; player life: 0; enemy life: 70.0; time: 322
+
+RUN: run status: enemy: 2; fitness: 21.22544845445559; player life: 0; enemy life: 70.0; time: 322
+
+RUN: run status: enemy: 2; fitness: 21.22544845445559; player life: 0; enemy life: 70.0; time: 322
+
+RUN: run status: enemy: 2; fitness: 21.22544845445559; player life: 0; enemy life: 70.0; time: 322
+
+RUN: run status: enemy: 2; fitness: 21.22544845445559; player life: 0; enemy life: 70.0; time: 322
+
+ LOADING SAVED SPECIALIST PARTS_1 SOLUTION FOR ENEMY 2 
+
+
+RUN: run status: enemy: 2; fitness: 30.302906513494595; player life: 0; enemy life: 60.0; time: 298
+
+RUN: run status: enemy: 2; fitness: 30.302906513494595; player life: 0; enemy life: 60.0; time: 298
+
+RUN: run status: enemy: 2; fitness: 30.302906513494595; player life: 0; enemy life: 60.0; time: 298
+
+RUN: run status: enemy: 2; fitness: 30.302906513494595; player life: 0; enemy life: 60.0; time: 298
+
+RUN: run status: enemy: 2; fitness: 30.302906513494595; player life: 0; enemy life: 60.0; time: 298
+
+ LOADING SAVED SPECIALIST FRACTION_5 SOLUTION FOR ENEMY 2 
+
+
+RUN: run status: enemy: 2; fitness: 21.273152252412803; player life: 0; enemy life: 70.0; time: 307
+
+RUN: run status: enemy: 2; fitness: 21.273152252412803; player life: 0; enemy life: 70.0; time: 307
+
+RUN: run status: enemy: 2; fitness: 21.273152252412803; player life: 0; enemy life: 70.0; time: 307
+
+RUN: run status: enemy: 2; fitness: 21.273152252412803; player life: 0; enemy life: 70.0; time: 307
+
+RUN: run status: enemy: 2; fitness: 21.273152252412803; player life: 0; enemy life: 70.0; time: 307
+
+ LOADING SAVED SPECIALIST PARTS_5 SOLUTION FOR ENEMY 2 
+
+
+RUN: run status: enemy: 2; fitness: 48.08110614572686; player life: 0; enemy life: 40.0; time: 372
+
+RUN: run status: enemy: 2; fitness: 48.08110614572686; player life: 0; enemy life: 40.0; time: 372
+
+RUN: run status: enemy: 2; fitness: 48.08110614572686; player life: 0; enemy life: 40.0; time: 372
+
+RUN: run status: enemy: 2; fitness: 48.08110614572686; player life: 0; enemy life: 40.0; time: 372
+
+RUN: run status: enemy: 2; fitness: 48.08110614572686; player life: 0; enemy life: 40.0; time: 372
+
+ LOADING SAVED SPECIALIST FRACTION_7 SOLUTION FOR ENEMY 2 
+
+
+RUN: run status: enemy: 2; fitness: 75.03385326087631; player life: 0; enemy life: 10.0; time: 390
+
+RUN: run status: enemy: 2; fitness: 75.03385326087631; player life: 0; enemy life: 10.0; time: 390
+
+RUN: run status: enemy: 2; fitness: 75.03385326087631; player life: 0; enemy life: 10.0; time: 390
+
+RUN: run status: enemy: 2; fitness: 75.03385326087631; player life: 0; enemy life: 10.0; time: 390
+
+RUN: run status: enemy: 2; fitness: 75.03385326087631; player life: 0; enemy life: 10.0; time: 390
+
+ LOADING SAVED SPECIALIST PARTS_7 SOLUTION FOR ENEMY 2 
+
+
+RUN: run status: enemy: 2; fitness: 39.0704108566101; player life: 0; enemy life: 50.0; time: 376
+
+RUN: run status: enemy: 2; fitness: 39.0704108566101; player life: 0; enemy life: 50.0; time: 376
+
+RUN: run status: enemy: 2; fitness: 39.0704108566101; player life: 0; enemy life: 50.0; time: 376
+
+RUN: run status: enemy: 2; fitness: 39.0704108566101; player life: 0; enemy life: 50.0; time: 376
+
+RUN: run status: enemy: 2; fitness: 39.0704108566101; player life: 0; enemy life: 50.0; time: 376
+
+PARAMETER CHANGE: enemies = [3]
+
+ LOADING SAVED SPECIALIST FRACTION_1 SOLUTION FOR ENEMY 3 
+
+
+RUN: run status: enemy: 3; fitness: -6.111467339502679; player life: 0; enemy life: 100; time: 451
+
+RUN: run status: enemy: 3; fitness: -6.111467339502679; player life: 0; enemy life: 100; time: 451
+
+RUN: run status: enemy: 3; fitness: -6.111467339502679; player life: 0; enemy life: 100; time: 451
+
+RUN: run status: enemy: 3; fitness: -6.111467339502679; player life: 0; enemy life: 100; time: 451
+
+RUN: run status: enemy: 3; fitness: -6.111467339502679; player life: 0; enemy life: 100; time: 451
+
+ LOADING SAVED SPECIALIST PARTS_1 SOLUTION FOR ENEMY 3 
+
+
+RUN: run status: enemy: 3; fitness: 38.746171188424526; player life: 0; enemy life: 50.0; time: 520
+
+RUN: run status: enemy: 3; fitness: 38.746171188424526; player life: 0; enemy life: 50.0; time: 520
+
+RUN: run status: enemy: 3; fitness: 38.746171188424526; player life: 0; enemy life: 50.0; time: 520
+
+RUN: run status: enemy: 3; fitness: 38.746171188424526; player life: 0; enemy life: 50.0; time: 520
+
+RUN: run status: enemy: 3; fitness: 38.746171188424526; player life: 0; enemy life: 50.0; time: 520
+
+ LOADING SAVED SPECIALIST FRACTION_5 SOLUTION FOR ENEMY 3 
+
+
+RUN: run status: enemy: 3; fitness: 65.75583309933626; player life: 0; enemy life: 20.0; time: 515
+
+RUN: run status: enemy: 3; fitness: 65.75583309933626; player life: 0; enemy life: 20.0; time: 515
+
+RUN: run status: enemy: 3; fitness: 65.75583309933626; player life: 0; enemy life: 20.0; time: 515
+
+RUN: run status: enemy: 3; fitness: 65.75583309933626; player life: 0; enemy life: 20.0; time: 515
+
+RUN: run status: enemy: 3; fitness: 65.75583309933626; player life: 0; enemy life: 20.0; time: 515
+
+ LOADING SAVED SPECIALIST PARTS_5 SOLUTION FOR ENEMY 3 
+
+
+RUN: run status: enemy: 3; fitness: 21.17105438238979; player life: 0; enemy life: 70.0; time: 340
+
+RUN: run status: enemy: 3; fitness: 21.17105438238979; player life: 0; enemy life: 70.0; time: 340
+
+RUN: run status: enemy: 3; fitness: 21.17105438238979; player life: 0; enemy life: 70.0; time: 340
+
+RUN: run status: enemy: 3; fitness: 21.17105438238979; player life: 0; enemy life: 70.0; time: 340
+
+RUN: run status: enemy: 3; fitness: 21.17105438238979; player life: 0; enemy life: 70.0; time: 340
+
+ LOADING SAVED SPECIALIST FRACTION_7 SOLUTION FOR ENEMY 3 
+
+
+RUN: run status: enemy: 3; fitness: 21.17399989261955; player life: 0; enemy life: 70.0; time: 339
+
+RUN: run status: enemy: 3; fitness: 21.17399989261955; player life: 0; enemy life: 70.0; time: 339
+
+RUN: run status: enemy: 3; fitness: 21.17399989261955; player life: 0; enemy life: 70.0; time: 339
+
+RUN: run status: enemy: 3; fitness: 21.17399989261955; player life: 0; enemy life: 70.0; time: 339
+
+RUN: run status: enemy: 3; fitness: 21.17399989261955; player life: 0; enemy life: 70.0; time: 339
+
+ LOADING SAVED SPECIALIST PARTS_7 SOLUTION FOR ENEMY 3 
+
+
+RUN: run status: enemy: 3; fitness: 30.779644174921675; player life: 0; enemy life: 60.0; time: 185
+
+RUN: run status: enemy: 3; fitness: 30.779644174921675; player life: 0; enemy life: 60.0; time: 185
+
+RUN: run status: enemy: 3; fitness: 30.779644174921675; player life: 0; enemy life: 60.0; time: 185
+
+RUN: run status: enemy: 3; fitness: 30.779644174921675; player life: 0; enemy life: 60.0; time: 185
+
+RUN: run status: enemy: 3; fitness: 30.779644174921675; player life: 0; enemy life: 60.0; time: 185
+
+PARAMETER CHANGE: enemies = [4]
+
+ LOADING SAVED SPECIALIST FRACTION_1 SOLUTION FOR ENEMY 4 
+
+
+RUN: run status: enemy: 4; fitness: 2.981406785503766; player life: 0; enemy life: 90.0; time: 411
+
+RUN: run status: enemy: 4; fitness: 2.981406785503766; player life: 0; enemy life: 90.0; time: 411
+
+RUN: run status: enemy: 4; fitness: 2.981406785503766; player life: 0; enemy life: 90.0; time: 411
+
+RUN: run status: enemy: 4; fitness: 2.981406785503766; player life: 0; enemy life: 90.0; time: 411
+
+RUN: run status: enemy: 4; fitness: 2.981406785503766; player life: 0; enemy life: 90.0; time: 411
+
+ LOADING SAVED SPECIALIST PARTS_1 SOLUTION FOR ENEMY 4 
+
+
+RUN: run status: enemy: 4; fitness: 11.9669137782012; player life: 0; enemy life: 80.0; time: 417
+
+RUN: run status: enemy: 4; fitness: 11.9669137782012; player life: 0; enemy life: 80.0; time: 417
+
+RUN: run status: enemy: 4; fitness: 11.9669137782012; player life: 0; enemy life: 80.0; time: 417
+
+RUN: run status: enemy: 4; fitness: 11.9669137782012; player life: 0; enemy life: 80.0; time: 417
+
+RUN: run status: enemy: 4; fitness: 11.9669137782012; player life: 0; enemy life: 80.0; time: 417
+
+ LOADING SAVED SPECIALIST FRACTION_5 SOLUTION FOR ENEMY 4 
+
+
+RUN: run status: enemy: 4; fitness: 2.8536707423311025; player life: 0; enemy life: 90.0; time: 467
+
+RUN: run status: enemy: 4; fitness: 2.8536707423311025; player life: 0; enemy life: 90.0; time: 467
+
+RUN: run status: enemy: 4; fitness: 2.8536707423311025; player life: 0; enemy life: 90.0; time: 467
+
+RUN: run status: enemy: 4; fitness: 2.8536707423311025; player life: 0; enemy life: 90.0; time: 467
+
+RUN: run status: enemy: 4; fitness: 2.8536707423311025; player life: 0; enemy life: 90.0; time: 467
+
+ LOADING SAVED SPECIALIST PARTS_5 SOLUTION FOR ENEMY 4 
+
+
+RUN: run status: enemy: 4; fitness: 2.9961129328934613; player life: 0; enemy life: 90.0; time: 405
+
+RUN: run status: enemy: 4; fitness: 2.9961129328934613; player life: 0; enemy life: 90.0; time: 405
+
+RUN: run status: enemy: 4; fitness: 2.9961129328934613; player life: 0; enemy life: 90.0; time: 405
+
+RUN: run status: enemy: 4; fitness: 2.9961129328934613; player life: 0; enemy life: 90.0; time: 405
+
+RUN: run status: enemy: 4; fitness: 2.9961129328934613; player life: 0; enemy life: 90.0; time: 405
+
+ LOADING SAVED SPECIALIST FRACTION_7 SOLUTION FOR ENEMY 4 
+
+
+RUN: run status: enemy: 4; fitness: 21.401578041001624; player life: 0; enemy life: 70.0; time: 270
+
+RUN: run status: enemy: 4; fitness: 21.401578041001624; player life: 0; enemy life: 70.0; time: 270
+
+RUN: run status: enemy: 4; fitness: 21.401578041001624; player life: 0; enemy life: 70.0; time: 270
+
+RUN: run status: enemy: 4; fitness: 21.401578041001624; player life: 0; enemy life: 70.0; time: 270
+
+RUN: run status: enemy: 4; fitness: 21.401578041001624; player life: 0; enemy life: 70.0; time: 270
+
+ LOADING SAVED SPECIALIST PARTS_7 SOLUTION FOR ENEMY 4 
+
+
+RUN: run status: enemy: 4; fitness: 21.747726571953372; player life: 0; enemy life: 70.0; time: 191
+
+RUN: run status: enemy: 4; fitness: 21.747726571953372; player life: 0; enemy life: 70.0; time: 191
+
+RUN: run status: enemy: 4; fitness: 21.747726571953372; player life: 0; enemy life: 70.0; time: 191
+
+RUN: run status: enemy: 4; fitness: 21.747726571953372; player life: 0; enemy life: 70.0; time: 191
+
+RUN: run status: enemy: 4; fitness: 21.747726571953372; player life: 0; enemy life: 70.0; time: 191
+
+PARAMETER CHANGE: enemies = [5]
+
+ LOADING SAVED SPECIALIST FRACTION_1 SOLUTION FOR ENEMY 5 
+
+
+RUN: run status: enemy: 5; fitness: 92.71482255552046; player life: 82.60000000000016; enemy life: 0; time: 256
+
+RUN: run status: enemy: 5; fitness: 92.77482255552046; player life: 83.20000000000016; enemy life: 0; time: 256
+
+RUN: run status: enemy: 5; fitness: 92.41873645484159; player life: 79.6000000000002; enemy life: 0; time: 255
+
+RUN: run status: enemy: 5; fitness: 92.35873645484159; player life: 79.0000000000002; enemy life: 0; time: 255
+
+RUN: run status: enemy: 5; fitness: 92.08164533066628; player life: 77.20000000000022; enemy life: 0; time: 281
+
+ LOADING SAVED SPECIALIST PARTS_1 SOLUTION FOR ENEMY 5 
+
+
+RUN: run status: enemy: 5; fitness: 90.35026654476808; player life: 64.00000000000034; enemy life: 0; time: 424
+
+RUN: run status: enemy: 5; fitness: 89.66763751052515; player life: 58.60000000000033; enemy life: 0; time: 489
+
+RUN: run status: enemy: 5; fitness: 91.82855887687; player life: 76.00000000000023; enemy life: 0; time: 321
+
+RUN: run status: enemy: 5; fitness: 92.09185751001958; player life: 79.0000000000002; enemy life: 0; time: 333
+
+RUN: run status: enemy: 5; fitness: 92.27642023266134; player life: 79.6000000000002; enemy life: 0; time: 294
+
+ LOADING SAVED SPECIALIST FRACTION_5 SOLUTION FOR ENEMY 5 
+
+
+RUN: run status: enemy: 5; fitness: 94.61240366476761; player life: 97.00000000000003; enemy life: 0; time: 162
+
+RUN: run status: enemy: 5; fitness: 94.61240366476761; player life: 97.00000000000003; enemy life: 0; time: 162
+
+RUN: run status: enemy: 5; fitness: 94.24624979919324; player life: 93.40000000000006; enemy life: 0; time: 163
+
+RUN: run status: enemy: 5; fitness: 93.49873645484158; player life: 90.40000000000009; enemy life: 0; time: 255
+
+RUN: run status: enemy: 5; fitness: 92.6180929290619; player life: 82.60000000000016; enemy life: 0; time: 282
+
+ LOADING SAVED SPECIALIST PARTS_5 SOLUTION FOR ENEMY 5 
+
+
+RUN: run status: enemy: 5; fitness: 93.5780929290619; player life: 92.20000000000007; enemy life: 0; time: 282
+
+RUN: run status: enemy: 5; fitness: 93.5780929290619; player life: 92.20000000000007; enemy life: 0; time: 282
+
+RUN: run status: enemy: 5; fitness: 94.21669509194093; player life: 95.20000000000005; enemy life: 0; time: 201
+
+RUN: run status: enemy: 5; fitness: 93.5780929290619; player life: 92.20000000000007; enemy life: 0; time: 282
+
+RUN: run status: enemy: 5; fitness: 94.1517323025988; player life: 94.60000000000005; enemy life: 0; time: 202
+
+ LOADING SAVED SPECIALIST FRACTION_7 SOLUTION FOR ENEMY 5 
+
+
+RUN: run status: enemy: 5; fitness: 89.9052886203982; player life: 55.00000000000032; enemy life: 0; time: 269
+
+RUN: run status: enemy: 5; fitness: 88.86324619773175; player life: 45.4000000000003; enemy life: 0; time: 292
+
+RUN: run status: enemy: 5; fitness: 90.27275134159977; player life: 58.60000000000033; enemy life: 0; time: 267
+
+RUN: run status: enemy: 5; fitness: 89.06528862039819; player life: 46.6000000000003; enemy life: 0; time: 269
+
+RUN: run status: enemy: 5; fitness: 90.03275134159978; player life: 56.20000000000032; enemy life: 0; time: 267
+
+ LOADING SAVED SPECIALIST PARTS_7 SOLUTION FOR ENEMY 5 
+
+
+RUN: run status: enemy: 5; fitness: 86.09921377653416; player life: 19.600000000000236; enemy life: 0; time: 351
+
+RUN: run status: enemy: 5; fitness: 66.05196501081936; player life: 0; enemy life: 20.0; time: 383
+
+RUN: run status: enemy: 5; fitness: 84.93794861721985; player life: 7.000000000000233; enemy life: 0; time: 318
+
+RUN: run status: enemy: 5; fitness: 88.46901301948917; player life: 40.600000000000286; enemy life: 0; time: 268
+
+RUN: run status: enemy: 5; fitness: 88.14324619773174; player life: 38.20000000000028; enemy life: 0; time: 292
+
+PARAMETER CHANGE: enemies = [6]
+
+ LOADING SAVED SPECIALIST FRACTION_1 SOLUTION FOR ENEMY 6 
+
+
+RUN: run status: enemy: 6; fitness: -5.560681631015528; player life: 0; enemy life: 100; time: 260
+
+RUN: run status: enemy: 6; fitness: -5.560681631015528; player life: 0; enemy life: 100; time: 260
+
+RUN: run status: enemy: 6; fitness: -5.560681631015528; player life: 0; enemy life: 100; time: 260
+
+RUN: run status: enemy: 6; fitness: -5.560681631015528; player life: 0; enemy life: 100; time: 260
+
+RUN: run status: enemy: 6; fitness: -5.560681631015528; player life: 0; enemy life: 100; time: 260
+
+ LOADING SAVED SPECIALIST PARTS_1 SOLUTION FOR ENEMY 6 
+
+
+RUN: run status: enemy: 6; fitness: -5.402677381872279; player life: 0; enemy life: 100; time: 222
+
+RUN: run status: enemy: 6; fitness: -5.402677381872279; player life: 0; enemy life: 100; time: 222
+
+RUN: run status: enemy: 6; fitness: -5.402677381872279; player life: 0; enemy life: 100; time: 222
+
+RUN: run status: enemy: 6; fitness: -5.402677381872279; player life: 0; enemy life: 100; time: 222
+
+RUN: run status: enemy: 6; fitness: -5.402677381872279; player life: 0; enemy life: 100; time: 222
+
+ LOADING SAVED SPECIALIST FRACTION_5 SOLUTION FOR ENEMY 6 
+
+
+RUN: run status: enemy: 6; fitness: 12.89405452609942; player life: 0; enemy life: 80.0; time: 165
+
+RUN: run status: enemy: 6; fitness: 12.89405452609942; player life: 0; enemy life: 80.0; time: 165
+
+RUN: run status: enemy: 6; fitness: 12.89405452609942; player life: 0; enemy life: 80.0; time: 165
+
+RUN: run status: enemy: 6; fitness: 12.89405452609942; player life: 0; enemy life: 80.0; time: 165
+
+RUN: run status: enemy: 6; fitness: 12.89405452609942; player life: 0; enemy life: 80.0; time: 165
+
+ LOADING SAVED SPECIALIST PARTS_5 SOLUTION FOR ENEMY 6 
+
+
+RUN: run status: enemy: 6; fitness: 2.8472673052958957; player life: 0; enemy life: 90.0; time: 470
+
+RUN: run status: enemy: 6; fitness: 2.8472673052958957; player life: 0; enemy life: 90.0; time: 470
+
+RUN: run status: enemy: 6; fitness: 2.8472673052958957; player life: 0; enemy life: 90.0; time: 470
+
+RUN: run status: enemy: 6; fitness: 2.8472673052958957; player life: 0; enemy life: 90.0; time: 470
+
+RUN: run status: enemy: 6; fitness: 2.8472673052958957; player life: 0; enemy life: 90.0; time: 470
+
+ LOADING SAVED SPECIALIST FRACTION_7 SOLUTION FOR ENEMY 6 
+
+
+RUN: run status: enemy: 6; fitness: -4.897839799950911; player life: 0; enemy life: 100; time: 134
+
+RUN: run status: enemy: 6; fitness: -4.897839799950911; player life: 0; enemy life: 100; time: 134
+
+RUN: run status: enemy: 6; fitness: -4.897839799950911; player life: 0; enemy life: 100; time: 134
+
+RUN: run status: enemy: 6; fitness: -4.897839799950911; player life: 0; enemy life: 100; time: 134
+
+RUN: run status: enemy: 6; fitness: -4.897839799950911; player life: 0; enemy life: 100; time: 134
+
+ LOADING SAVED SPECIALIST PARTS_7 SOLUTION FOR ENEMY 6 
+
+
+RUN: run status: enemy: 6; fitness: 13.009567413221264; player life: 0; enemy life: 80.0; time: 147
+
+RUN: run status: enemy: 6; fitness: 13.009567413221264; player life: 0; enemy life: 80.0; time: 147
+
+RUN: run status: enemy: 6; fitness: 13.009567413221264; player life: 0; enemy life: 80.0; time: 147
+
+RUN: run status: enemy: 6; fitness: 13.009567413221264; player life: 0; enemy life: 80.0; time: 147
+
+RUN: run status: enemy: 6; fitness: 13.009567413221264; player life: 0; enemy life: 80.0; time: 147
+
+PARAMETER CHANGE: enemies = [7]
+
+ LOADING SAVED SPECIALIST FRACTION_1 SOLUTION FOR ENEMY 7 
+
+
+RUN: run status: enemy: 7; fitness: 13.88912613582669; player life: 0; enemy life: 80.0; time: 61
+
+RUN: run status: enemy: 7; fitness: 13.88912613582669; player life: 0; enemy life: 80.0; time: 61
+
+RUN: run status: enemy: 7; fitness: 13.88912613582669; player life: 0; enemy life: 80.0; time: 61
+
+RUN: run status: enemy: 7; fitness: 13.88912613582669; player life: 0; enemy life: 80.0; time: 61
+
+RUN: run status: enemy: 7; fitness: 13.88912613582669; player life: 0; enemy life: 80.0; time: 61
+
+ LOADING SAVED SPECIALIST PARTS_1 SOLUTION FOR ENEMY 7 
+
+
+RUN: run status: enemy: 7; fitness: 13.88912613582669; player life: 0; enemy life: 80.0; time: 61
+
+RUN: run status: enemy: 7; fitness: 13.88912613582669; player life: 0; enemy life: 80.0; time: 61
+
+RUN: run status: enemy: 7; fitness: 13.88912613582669; player life: 0; enemy life: 80.0; time: 61
+
+RUN: run status: enemy: 7; fitness: 13.88912613582669; player life: 0; enemy life: 80.0; time: 61
+
+RUN: run status: enemy: 7; fitness: 13.88912613582669; player life: 0; enemy life: 80.0; time: 61
+
+ LOADING SAVED SPECIALIST FRACTION_5 SOLUTION FOR ENEMY 7 
+
+
+RUN: run status: enemy: 7; fitness: -3.258096538021482; player life: 0; enemy life: 100; time: 26
+
+RUN: run status: enemy: 7; fitness: -3.258096538021482; player life: 0; enemy life: 100; time: 26
+
+RUN: run status: enemy: 7; fitness: -3.258096538021482; player life: 0; enemy life: 100; time: 26
+
+RUN: run status: enemy: 7; fitness: -3.258096538021482; player life: 0; enemy life: 100; time: 26
+
+RUN: run status: enemy: 7; fitness: -3.258096538021482; player life: 0; enemy life: 100; time: 26
+
+ LOADING SAVED SPECIALIST PARTS_5 SOLUTION FOR ENEMY 7 
+
+
+RUN: run status: enemy: 7; fitness: -2.70805020110221; player life: 0; enemy life: 100; time: 15
+
+RUN: run status: enemy: 7; fitness: -2.70805020110221; player life: 0; enemy life: 100; time: 15
+
+RUN: run status: enemy: 7; fitness: -2.70805020110221; player life: 0; enemy life: 100; time: 15
+
+RUN: run status: enemy: 7; fitness: -2.70805020110221; player life: 0; enemy life: 100; time: 15
+
+RUN: run status: enemy: 7; fitness: -2.70805020110221; player life: 0; enemy life: 100; time: 15
+
+ LOADING SAVED SPECIALIST FRACTION_7 SOLUTION FOR ENEMY 7 
+
+
+RUN: run status: enemy: 7; fitness: 90.79946500072774; player life: 62.20000000000034; enemy life: 0; time: 226
+
+RUN: run status: enemy: 7; fitness: 90.79946500072774; player life: 62.20000000000034; enemy life: 0; time: 226
+
+RUN: run status: enemy: 7; fitness: 90.79946500072774; player life: 62.20000000000034; enemy life: 0; time: 226
+
+RUN: run status: enemy: 7; fitness: 90.79946500072774; player life: 62.20000000000034; enemy life: 0; time: 226
+
+RUN: run status: enemy: 7; fitness: 90.79946500072774; player life: 62.20000000000034; enemy life: 0; time: 226
+
+ LOADING SAVED SPECIALIST PARTS_7 SOLUTION FOR ENEMY 7 
+
+
+RUN: run status: enemy: 7; fitness: 90.6706543710456; player life: 61.000000000000334; enemy life: 0; time: 228
+
+RUN: run status: enemy: 7; fitness: 90.6706543710456; player life: 61.000000000000334; enemy life: 0; time: 228
+
+RUN: run status: enemy: 7; fitness: 90.6706543710456; player life: 61.000000000000334; enemy life: 0; time: 228
+
+RUN: run status: enemy: 7; fitness: 90.6706543710456; player life: 61.000000000000334; enemy life: 0; time: 228
+
+RUN: run status: enemy: 7; fitness: 90.6706543710456; player life: 61.000000000000334; enemy life: 0; time: 228
+
+PARAMETER CHANGE: enemies = [8]
+
+ LOADING SAVED SPECIALIST FRACTION_1 SOLUTION FOR ENEMY 8 
+
+
+RUN: run status: enemy: 8; fitness: 21.55326262833369; player life: 0; enemy life: 70.0; time: 232
+
+RUN: run status: enemy: 8; fitness: 21.55326262833369; player life: 0; enemy life: 70.0; time: 232
+
+RUN: run status: enemy: 8; fitness: 21.55326262833369; player life: 0; enemy life: 70.0; time: 232
+
+RUN: run status: enemy: 8; fitness: 21.55326262833369; player life: 0; enemy life: 70.0; time: 232
+
+RUN: run status: enemy: 8; fitness: 21.55326262833369; player life: 0; enemy life: 70.0; time: 232
+
+ LOADING SAVED SPECIALIST PARTS_1 SOLUTION FOR ENEMY 8 
+
+
+RUN: run status: enemy: 8; fitness: 21.478539082137754; player life: 0; enemy life: 70.0; time: 250
+
+RUN: run status: enemy: 8; fitness: 21.478539082137754; player life: 0; enemy life: 70.0; time: 250
+
+RUN: run status: enemy: 8; fitness: 21.478539082137754; player life: 0; enemy life: 70.0; time: 250
+
+RUN: run status: enemy: 8; fitness: 21.478539082137754; player life: 0; enemy life: 70.0; time: 250
+
+RUN: run status: enemy: 8; fitness: 21.478539082137754; player life: 0; enemy life: 70.0; time: 250
+
+ LOADING SAVED SPECIALIST FRACTION_5 SOLUTION FOR ENEMY 8 
+
+
+RUN: run status: enemy: 8; fitness: 21.394197933704003; player life: 0; enemy life: 70.0; time: 272
+
+RUN: run status: enemy: 8; fitness: 21.394197933704003; player life: 0; enemy life: 70.0; time: 272
+
+RUN: run status: enemy: 8; fitness: 21.394197933704003; player life: 0; enemy life: 70.0; time: 272
+
+RUN: run status: enemy: 8; fitness: 21.394197933704003; player life: 0; enemy life: 70.0; time: 272
+
+RUN: run status: enemy: 8; fitness: 21.394197933704003; player life: 0; enemy life: 70.0; time: 272
+
+ LOADING SAVED SPECIALIST PARTS_5 SOLUTION FOR ENEMY 8 
+
+
+RUN: run status: enemy: 8; fitness: 47.875316609105795; player life: 0; enemy life: 40.0; time: 457
+
+RUN: run status: enemy: 8; fitness: 47.875316609105795; player life: 0; enemy life: 40.0; time: 457
+
+RUN: run status: enemy: 8; fitness: 47.875316609105795; player life: 0; enemy life: 40.0; time: 457
+
+RUN: run status: enemy: 8; fitness: 47.875316609105795; player life: 0; enemy life: 40.0; time: 457
+
+RUN: run status: enemy: 8; fitness: 47.875316609105795; player life: 0; enemy life: 40.0; time: 457
+
+ LOADING SAVED SPECIALIST FRACTION_7 SOLUTION FOR ENEMY 8 
+
+
+RUN: run status: enemy: 8; fitness: 56.99611293289346; player life: 0; enemy life: 30.0; time: 405
+
+RUN: run status: enemy: 8; fitness: 56.99611293289346; player life: 0; enemy life: 30.0; time: 405
+
+RUN: run status: enemy: 8; fitness: 56.99611293289346; player life: 0; enemy life: 30.0; time: 405
+
+RUN: run status: enemy: 8; fitness: 56.99611293289346; player life: 0; enemy life: 30.0; time: 405
+
+RUN: run status: enemy: 8; fitness: 56.99611293289346; player life: 0; enemy life: 30.0; time: 405
+
+ LOADING SAVED SPECIALIST PARTS_7 SOLUTION FOR ENEMY 8 
+
+
+RUN: run status: enemy: 8; fitness: 3.519361076658009; player life: 0; enemy life: 90.0; time: 240
+
+RUN: run status: enemy: 8; fitness: 3.519361076658009; player life: 0; enemy life: 90.0; time: 240
+
+RUN: run status: enemy: 8; fitness: 3.519361076658009; player life: 0; enemy life: 90.0; time: 240
+
+RUN: run status: enemy: 8; fitness: 3.519361076658009; player life: 0; enemy life: 90.0; time: 240
+
+RUN: run status: enemy: 8; fitness: 3.519361076658009; player life: 0; enemy life: 90.0; time: 240
