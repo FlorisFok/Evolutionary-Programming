@@ -37,8 +37,9 @@ for nplot, level in enumerate([1,5,7]):
                 except:
                     print(text[i1:i2])
                 count+=1
-    box_data.append(datafrac)
+                
     box_data.append(datapart)
+    box_data.append(datafrac)
 
 ax.boxplot(box_data)
 ax.set_xticklabels(["p1", "f1", "p5", "f5", "p7", "f7"])

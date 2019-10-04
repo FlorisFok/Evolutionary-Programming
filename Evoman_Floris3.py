@@ -114,7 +114,7 @@ def mutate(individual, mutation_rate):
     if MUTATE == "random":
         for i in range(0,len(individual)):
             if np.random.random() <= mutation_rate:
-                individual[i] = np.random.normal(0, 1)
+                individual[i] = np.random.normal(-1, 1)
 
     elif MUTATE == "noise":
         # noise = np.random.normal(-1,1,len(individual)) * mutation_rate
@@ -257,7 +257,7 @@ settings = get_settings()
 NPOP = 50           if settings['NPOP'] == None else int(settings['NPOP']) #https://www.researchgate.net/profile/Vlasis_Koumousis/publication/3418865_A_saw-tooth_genetic_algorithm_combining_the_effects_of_variable_population_size_and_reinitialization_to_enhance_performance/links/0c96051862c1f60868000000.pdf
 GENS = 100          if settings['GENS'] == None else int(settings['GENS']) #https://www.semanticscholar.org/paper/A-study-on-non-random-mating-and-varying-population-Laseeb/b06da1fdb611bcdc7e52785784be455db56d12a4
 MU = 0.3            if settings['MU'] == None else settings['MU'] #bronnnnn
-CROSS = 'bits'      if settings['CROSS'] == None else settings['CROSS']
+CROSS = 'fraction'      if settings['CROSS'] == None else settings['CROSS']
 SELECT = 'prop'     if settings['SELECT'] == None else settings['SELECT']
 MUTATE = 'random'   if settings['MUTATE'] == None else settings['MUTATE']
 LUCKY = True        if settings['LUCKY'] == None else settings['LUCKY']
