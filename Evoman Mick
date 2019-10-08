@@ -45,6 +45,9 @@ class Individual:
         self.player_life = p
         self.enemy_life = e
         self.time = t
+        
+    def evaluate(simulation(self, model)):
+      self.fitness = model.predict([self.weights])[0]*100
 
     def check_limits(self):
         new_weights = list()
