@@ -1,20 +1,24 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import sys
+
 sys.path.insert(0, 'evoman')
 from evoman.environment import Environment
 from demo_controller import player_controller, enemy_controller
 from random import sample
+from tensorflow.keras.models import model_from_json, load_model
+
 
 ENV = Environment(experiment_name="test",
-                  enemies=[2],
+                  enemies=[1],
                   playermode="ai",
                   player_controller=player_controller(),
                   enemy_controller=enemy_controller(),
                   level=2,
                   speed="fastest",
                   contacthurt='player',
-                  logs='off')
+                  logs='on')
+TRUE_EVAL = .05
 
 
 class Individual:
@@ -40,14 +44,14 @@ class Individual:
             self.weights = weights
 
     def evaluate(self):
-        f, p, e, t = ENV.play(pcont=self.weights)
-        self.fitness = f
-        self.player_life = p
-        self.enemy_life = e
-        self.time = t
-        
-    def evaluate(simulation(self, model)):
-      self.fitness = model.predict([self.weights])[0]*100
+        if np.random.random() > TRUE_EVAL:
+            self.fitness = MODEL.predict([[self.weights]])[0][0] * 100
+        else:
+            f, p, e, t = ENV.play(pcont=self.weights)
+            self.fitness = f
+            self.player_life = p
+            self.enemy_life = e
+            self.time = t
 
     def check_limits(self):
         new_weights = list()
@@ -66,14 +70,14 @@ class Individual:
 
     def mutate(self, mutation_rate):
         for i in range(0, len(self.weights)):
-            if np.random.random() <= mutation_rate ** 2:
-                self.weights[i] = np.random.normal(0, 1)
+            # if np.random.random() <= mutation_rate ** 2:
+            #     self.weights[i] = np.random.normal(0, 1)
             if np.random.random() <= mutation_rate:
                 self.weights[i] = self.weights[i] * np.random.normal(0, 1.27)
-            if np.random.random() <= mutation_rate:
-                self.weights[i] = self.weights[i] + np.random.normal(0, .1)
-        if np.random.random() <= mutation_rate ** 3:
-            np.random.shuffle(self.weights)
+            # if np.random.random() <= mutation_rate:
+            #     self.weights[i] = self.weights[i] + np.random.normal(0, .1)
+        # if np.random.random() <= mutation_rate ** 3:
+        #     np.random.shuffle(self.weights)
         self.check_limits()
 
 
@@ -120,12 +124,12 @@ class Population:
                 mean_parents = (parent1.fitness + parent2.fitness) / 2
             else:
                 mean_parents = 0
-            print(f'{i}: fitness = {round(individual.fitness, 4)}, age = {individual.age}',
+            print(f'{i}: fitness = {round(individual.fitness, 4)}, age = {individual.age}, '
                   f'children = {individual.children}, parent_fit = {round(mean_parents, 2)}')
             i += 1
 
-        print(f'Mean fitness: {round(self.mean_fit, 4)}, Mean age: {round(self.mean_age, 2)}',
-              f'Mean children = {round(self.mean_children, 2)}\n')
+        print(f'Mean fitness: {round(self.mean_fit, 4)}, Mean age: {round(self.mean_age, 2)}, ',
+              f'Mean children = {round(self.mean_children, 2)} \n')
 
     def initialize(self):
         for i in range(self.size):
@@ -143,12 +147,12 @@ class Population:
             return sample(self.individuals, n)
         elif type_ == 'fit':
             pop_fitness = [(individual.fitness + 7) for individual in self.individuals]
-            probabilities = [(fit/sum(pop_fitness)) for fit in pop_fitness]
+            probabilities = [(fit / sum(pop_fitness)) for fit in pop_fitness]
             return np.random.choice(self.individuals, size=n, replace=False, p=probabilities)
         elif type_ == 'rank':
             pop_fitness = [(individual.fitness + 7) for individual in self.individuals]
             ranks = [sorted(pop_fitness).index(ind) for ind in pop_fitness]
-            probabilities = [rank/sum(ranks) for rank in ranks]
+            probabilities = [rank / sum(ranks) for rank in ranks]
             return np.random.choice(self.individuals, size=n, replace=False, p=probabilities)
 
     def trim(self, type_='fit'):
@@ -156,12 +160,12 @@ class Population:
             self.individuals = sample(self.individuals, self.size)
         elif type_ == 'fit':
             pop_fitness = [(individual.fitness + 7) for individual in self.individuals]
-            probabilities = [(fit/sum(pop_fitness)) for fit in pop_fitness]
+            probabilities = [(fit / sum(pop_fitness)) for fit in pop_fitness]
             self.individuals = list(np.random.choice(self.individuals, size=self.size, replace=False, p=probabilities))
         elif type_ == 'rank':
             pop_fitness = [(individual.fitness + 7) for individual in self.individuals]
             ranks = [(sorted(pop_fitness).index(ind) + 0.1) for ind in pop_fitness]
-            probabilities = [rank/sum(ranks) for rank in ranks]
+            probabilities = [rank / sum(ranks) for rank in ranks]
             self.individuals = list(np.random.choice(self.individuals, size=self.size, replace=False, p=probabilities))
 
         self.update_stats()
@@ -236,15 +240,25 @@ def main(size=5, generations=5, children_per_gen=5):
         print('Generation:', population.generation)
 
         for j in range(children_per_gen):
-            population.sex(type_='uniform', selection_type='rank')
+            population.sex(type_='recombine', selection_type='rank')
 
-        population.trim(type_='fit')
+        population.trim(type_='rank')
         population.display_population()
 
-        population.mutation_rate_change(type_='exp')
+        population.mutation_rate_change()
         population.next_generation()
 
     population.plot_generations()
 
 
-main(size=10, generations=5, children_per_gen=5)
+def get_model():
+    json_file = open('model.json', 'r')
+    loaded_model_json = json_file.read()
+    model = model_from_json(loaded_model_json)
+    model.load_weights("model.h5")
+
+    return model
+
+
+MODEL = get_model()
+main(size=100, generations=50, children_per_gen=50)
